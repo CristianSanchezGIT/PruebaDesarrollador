@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<htmlang="es">
+<head>
+    <title>Empresas</title> 
+    
+    <link th:href ="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css" />
+    <link th:href ="@{/css/cssprincipal.css}" rel="stylesheet" href="../static/css/bootstrap.css" />
+    
+   
+    <script th:src = "@{/js/jquery.js}" src="jquey.js"> </script>
+    <script th:src = "@{/js/bootstrap.js}" src="bootstrap.js"> </script>
+    <script th:src = "@{/js/jqueryprincipal.js}" src="jquey.js"> </script>
+    
+</head>
+
+
+<body width="100%" bgcolor="#f4f4f4">
+
+    <!-- Modal -->
+  <div class="modal fade" id="miModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id="textoModal">...</p >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="CerrarModal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <center class="centrado">
+    
+
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+            <tr>
+                <td class="tdinicial">
+				<div>
+                    <img th:src= "@{/img/fondo-footer.jpg}" border="0" class="imgfooter">
+                </div>
+				</td>
+            </tr>
+        </table>
+
+
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+
+			<tr>
+                <td bgcolor="#ffffff">
+                	<div class="card-body">
+                		<center>
+						    <h5 class="card-title" >EMPRESAS DE TRANSPORTE</h5>
+						    <p class="card-text">Formulario para crear una nueva empresa.</p>
+						</center>
+		                    <br>
+		                    <form id="formEmpresa">
+		                    <div class="mb-3">
+		                    	<label for="exampleInputEmail1" class="form-label">Representante Legal:</label>
+			                    <select class="form-select" aria-label="Default select example" id="representante" required>
+								  <option value="">Seleccione una opcion</option> 
+								</select>
+							</div><br>
+							
+							<div class="mb-3">
+		                    	<label for="exampleInputEmail1" class="form-label">Tipo De Documento:</label>
+			                    <select class="form-select" aria-label="Default select example" id="tipoDoc" required>
+								  <option value="">Seleccione una opcion</option>
+								  <option value="CC">CC</option>
+								  <option value="NIT">NIT</option>
+								  <option value="CE">CE</option>
+								  <option value="TI">TI</option>
+								  <option value="PAS">PAS</option>
+								</select>
+							</div><br>
+
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Numero de documento:</label>
+							    <input type="text" class="form-control" id="numerodoc" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Nombre Completo:</label>
+							    <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Direccion:</label>
+							    <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Ciudad:</label>
+							    <input type="text" class="form-control" id="ciudad" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Departamento:</label>
+							    <input type="text" class="form-control" id="departamento" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Pais:</label>
+							    <input type="text" class="form-control" id="pais" aria-describedby="emailHelp" required>
+							  </div><br>
+							  
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label">Telefono:</label>
+							    <input type="text" class="form-control" id="telefono" aria-describedby="emailHelp" required>
+							  </div>
+							  
+							  <button type="button" id="guardar" class="btn btn-primary">Guardar Empresa</button>
+							  <button type="reset" id="limpiar" class="btn btn-primary">Limpiar Campos</button>
+							</form > 
+					</div>
+                </td>
+            </tr>
+            
+             <tr>
+                <td bgcolor="#00247f" align="center" valign="top" class="tdredes">
+                    <div>
+                        <a class="imagenesredes"> <img th:src= "@{/img/facebook.png}" width="27" /></a>
+                        <a class="imagenesredes"> <img th:src= "@{/img/twitter.png}" width="27" /></a>
+                        <a class="imagenesredes"> <img th:src= "@{/img/linkedin.png}" width="27" /></a>
+                        <a class="imagenesredes"> <img th:src= "@{/img/youtube.png}" width="27" /></a>
+                    </div>
+                </td>
+            </tr> 
+
+            <tr>
+                <td bgcolor="#237ABA" align="center" valign="top">
+				<br>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td>
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td class="textofinal"> 01 8000 123456 L&iacute;nea Cominicaci&oacute;n </td>
+                                        <td class="imgpagina"> <img th:src= "@{/img/mundo.png}" width="21px" height="21px" alt=""> </td>
+                                        <td class="textofinal"> &nbsp; www.empresasdetransporte.com.co </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+					<br>
+                </td>
+            </tr>
+        </table>
+
+    </center>
+    
+</body>
+</html>
